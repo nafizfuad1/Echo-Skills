@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("./fonts/Avenir-LT-Std-65-Medium.otf");
+}
+
+.karla {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.figtree {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: "Avenir LT Std"; */
+  font-family: "Figtree";
+}
+section {
+  height: 100vh;
+}
+.home-body {
+  display: flex;
+}
+.hero-title {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.logoImg {
+  width: 358px;
+  margin: 50px 0 0 0;
+}
+
+.home-left {
+  margin: 0 209px 0 135px;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hero-text {
+  margin: 13px 0 60px 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.hero-button {
+  padding: 15px 25px;
+  border: #fa4b00 1px solid;
+  border-radius: 25px;
+  color: #fa4b00;
+  font-size: 16px;
+  background: #fff;
+  font-weight: 750;
+}
+.hero-button:hover {
+  color: #ffff;
+  background: #fa4b00;
+}
+.home-right {
+  width: 601px;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-section-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+}
+footer {
+  background: #f2662e;
+}
+.footer-text {
+  font-family: "Karla";
+  font-weight: 400;
+  color: #ffff;
+  font-size: 16px;
+  margin-left: 135px;
+  padding: 20px 0;
+}

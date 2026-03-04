@@ -1,0 +1,225 @@
+const frontend = [
+  {
+    title: "HTML5",
+    description:
+      "HTML5 is a markup language used for structuring and presenting content on the World Wide Web.",
+    question: "Do you have knowledge about HTML5?",
+    imageURL: "./img/htm.png",
+  },
+  {
+    title: "CSS3",
+    description:
+      "CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.",
+    question: "Do you have knowledge about CSS3?",
+    imageURL: "./img/css.png",
+  },
+  {
+    title: "Bootstrap",
+    description:
+      "Bootstrap utilizes Sass for a modular and customizable architecture.",
+    question: "Do you have knowledge about Bootstrap?",
+    imageURL: "./img/bootstrap.png",
+  },
+  {
+    title: "JavaScript",
+    description:
+      "JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.",
+    question: "Do you have knowledge about JavaScript?",
+    imageURL: "./img/javascript.png",
+  },
+  {
+    title: "jQuery",
+    description:
+      "jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation easier.",
+    question: "Do you have knowledge about jQuery?",
+    imageURL: "./img/jquery.png",
+  },
+  {
+    title: "ES6",
+    description:
+      "JavaScript ES6 is the newer version of JavaScript that was introduced in 2015.",
+    question: "Do you have knowledge about ES6?",
+    imageURL: "./img/es6.png",
+  },
+  {
+    title: "npm Script",
+    description:
+      "An npm script is a convenient way to bundle common shell commands for your project.",
+    question: "Do you have knowledge about npm script?",
+    imageURL: "./img/npm.png",
+  },
+  {
+    title: "TypeScript",
+    description:
+      "TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.",
+    question: "Do you have knowledge about TypeScript?",
+    imageURL: "./img/typescript.png",
+  },
+  {
+    title: "React.js",
+    description:
+      "React is a JavaScript library developed by Facebook which, among other things, was used to build Instagram.com.",
+    question: "Do you have knowledge about React.js?",
+    imageURL: "./img/react.png",
+  },
+  {
+    title: "Angular.js",
+    description:
+      "AngularJS extends HTML with new attributes. AngularJS is perfect for Single Page Applications (SPAs).",
+    question: "Do you have knowledge about Angular.js?",
+    imageURL: "./img/angular.png",
+  },
+  {
+    title: "Vue.js",
+    description:
+      "Vue.js is an open-source front end JavaScript framework for building user interfaces and single-page applications.",
+    question: "Do you have knowledge about Vue.js?",
+    imageURL: "./img/vue.png",
+  },
+];
+
+const backend = [
+  {
+    title: "PHP",
+    description:
+      "PHP is a server scripting language, and a powerful tool for making dynamic and interactive Web pages.",
+    question: "Do you have knowledge about PHP?",
+    imageURL: "./img/php.png",
+  },
+  {
+    title: "Laravel",
+    description:
+      "Laravel is a PHP web application framework with expressive, elegant syntax.",
+    question: "Do you have knowledge about Laravel?",
+    imageURL: "./img/laravel.png",
+  },
+  {
+    title: "REST APIs",
+    description:
+      "REST APIs allow communication between client and server using HTTP methods like GET, POST, PUT, and DELETE.",
+    question: "Do you have knowledge about REST APIs?",
+    imageURL: "./img/restAPI.png",
+  },
+  {
+    title: "SQL Database",
+    description:
+      "SQL is a domain-specific language used in programming and designed for managing data held in a relational database management system.",
+    question: "Do you have knowledge about SQL database?",
+    imageURL: "./img/sql.png",
+  },
+  {
+    title: "C#",
+    description:
+      "C# is a general-purpose, multi-paradigm programming language. C# encompasses static typing, functional, generic, and object-oriented programming.",
+    question: "Do you have knowledge about C#?",
+    imageURL: "./img/cSharp.png",
+  },
+  {
+    title: "Ruby on Rails",
+    description:
+      "Ruby on Rails is a server-side web application, model–view–controller framework for building database-backed web applications.",
+    question: "Do you have knowledge about Ruby on Rails?",
+    imageURL: "./img/ruby.png",
+  },
+  {
+    title: "Node.js",
+    description:
+      "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on a JavaScript engine.",
+    question: "Do you have knowledge about Node.js?",
+    imageURL: "./img/nodejs.png",
+  },
+  {
+    title: "Python",
+    description:
+      "Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.",
+    question: "Do you have knowledge about Python?",
+    imageURL: "./img/python.png",
+  },
+];
+
+const fullstack = [
+  {
+    title: "HTML5",
+    description:
+      "HTML5 is a markup language used for structuring and presenting content on the World Wide Web.",
+    question: "Do you have knowledge about HTML5?",
+    imageURL: "./img/htm.png",
+  },
+  {
+    title: "Bootstrap",
+    description:
+      "Bootstrap utilizes Sass for a modular and customizable architecture.",
+    question: "Do you have knowledge about Bootstrap?",
+    imageURL: "./img/bootstrap.png",
+  },
+  {
+    title: "JavaScript",
+    description:
+      "JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.",
+    question: "Do you have knowledge about JavaScript?",
+    imageURL: "./img/javascript.png",
+  },
+  {
+    title: "npm Script",
+    description:
+      "An npm script is a convenient way to bundle common shell commands for your project.",
+    question: "Do you have knowledge about npm script?",
+    imageURL: "./img/npm.png",
+  },
+  {
+    title: "React.js",
+    description:
+      "React is a JavaScript library developed by Facebook which, among other things, was used to build Instagram.com.",
+    question: "Do you have knowledge about React.js?",
+    imageURL: "./img/react.png",
+  },
+  {
+    title: "Vue.js",
+    description:
+      "Vue.js is an open-source front end JavaScript framework for building user interfaces and single-page applications.",
+    question: "Do you have knowledge about Vue.js?",
+    imageURL: "./img/vue.png",
+  },
+  {
+    title: "PHP",
+    description:
+      "PHP is a server scripting language, and a powerful tool for making dynamic and interactive Web pages.",
+    question: "Do you have knowledge about PHP?",
+    imageURL: "./img/php.png",
+  },
+  {
+    title: "REST APIs",
+    description:
+      "REST APIs allow communication between client and server using HTTP methods like GET, POST, PUT, and DELETE.",
+    question: "Do you have knowledge about REST APIs?",
+    imageURL: "./img/restAPI.png",
+  },
+  {
+    title: "C#",
+    description:
+      "C# is a general-purpose, multi-paradigm programming language. C# encompasses static typing, functional, generic, and object-oriented programming.",
+    question: "Do you have knowledge about C#?",
+    imageURL: "./img/cSharp.png",
+  },
+  {
+    title: "Python",
+    description:
+      "Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.",
+    question: "Do you have knowledge about Python?",
+    imageURL: "./img/python.png",
+  },
+  {
+    title: "Node.js",
+    description:
+      "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on a JavaScript engine.",
+    question: "Do you have knowledge about Node.js?",
+    imageURL: "./img/nodejs.png",
+  },
+  {
+    title: "Ruby on Rails",
+    description:
+      "Ruby on Rails is a server-side web application, model–view–controller framework for building database-backed web applications.",
+    question: "Do you have knowledge about Ruby on Rails?",
+    imageURL: "./img/ruby.png",
+  },
+];
