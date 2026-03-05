@@ -292,3 +292,61 @@ function updateProgress() {
   const percent = (currentIndex / currentData.length) * 100;
   progress.style.width = percent + "%";
 }
+
+// YES / NO 
+yesBtn.addEventListener("click", () => {
+  answers[currentIndex] = "Yes";
+  nextSlide();
+});
+
+noBtn.addEventListener("click", () => {
+  answers[currentIndex] = "No";
+  nextSlide();
+});
+
+//  ARROWS 
+prevBtn.addEventListener("click", () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    renderSlide();
+  }
+});
+
+nextBtn.addEventListener("click", nextSlide);
+
+function nextSlide() {
+  if (currentIndex < currentData.length - 1) {
+    currentIndex++;
+    renderSlide();
+  } else {
+    showResult();
+  }
+}
+
+//  RESULT PAGE 
+function showResult() {
+  progress.style.width = "100%";
+
+  let resultHTML = `
+    <h2>Result</h2>
+    <ul>
+  `;
+
+  currentData.forEach((item, index) => {
+    resultHTML += `
+      <li>${item.title} : ${answers[index] || "Not Answered"}</li>
+    `;
+  });
+
+  resultHTML += `
+    </ul>
+    <button onclick="goHome()">Go Home</button>
+  `;
+
+  document.querySelector(".slider-right").innerHTML = resultHTML;
+}
+
+//  GO HOME 
+function goHome() {
+  location.reload();
+}
