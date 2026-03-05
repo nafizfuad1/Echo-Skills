@@ -16,7 +16,7 @@
   </head>
   <body>
     <!-- Home page starts here  -->
-    <section>
+    <section id="home">
       <div class="home-bg">
         <div class="container home-body">
           <div class="home-left">
@@ -29,15 +29,15 @@
                 Before we begin, please select a type of development.
               </p>
               <div class="hero-buttons">
-                <button data-type="frontend" class="hero-button">
+                <a data-type="frontend" class="hero-button">
                   Front-end development
-                </button>
-                <button data-type="backend" class="hero-button">
+                </a>
+                <a data-type="backend" class="hero-button">
                   Back-end development
-                </button>
-                <button data-type="fullstack" class="hero-button">
+                </a>
+                <a data-type="fullstack" class="hero-button">
                   Full stack development
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -59,7 +59,13 @@
     <section id="slider" class="hidden">
       <div class="slider-container">
         <div class="slider-left">
-          <img id="slideImage" src="" alt="" />
+          <div class="logo" id="logo">
+              <img src="./img/logo.svg" alt="logoImg" class="logoImg" />
+            </div>
+          <div class="slider-image-box">
+            <img id="slideImage" src="./img/html.png" alt="" />
+            <img id="image-plate" src="./img/base.png" alt="" />
+          </div>
         </div>
 
         <div class="slider-right">

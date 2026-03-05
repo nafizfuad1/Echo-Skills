@@ -4,7 +4,7 @@ const frontend = [
     description:
       "HTML5 is a markup language used for structuring and presenting content on the World Wide Web.",
     question: "Do you have knowledge about HTML5?",
-    imageURL: "./img/htm.png",
+    imageURL: "./img/html.png",
   },
   {
     title: "CSS3",
@@ -143,7 +143,7 @@ const fullstack = [
     description:
       "HTML5 is a markup language used for structuring and presenting content on the World Wide Web.",
     question: "Do you have knowledge about HTML5?",
-    imageURL: "./img/htm.png",
+    imageURL: "./img/html.png",
   },
   {
     title: "Bootstrap",
@@ -223,3 +223,72 @@ const fullstack = [
     imageURL: "./img/ruby.png",
   },
 ];
+
+//  GLOBAL STATE
+let currentIndex = 0;
+let currentData = [];
+let answers = [];
+
+// ELEMENTS
+const home = document.getElementById("home");
+const slider = document.getElementById("slider");
+
+const slideImage = document.getElementById("slideImage");
+const title = document.getElementById("slider-title");
+const description = document.getElementById("description");
+const question = document.getElementById("question");
+const progress = document.getElementById("progress");
+
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
+
+// DATA MAP
+const allData = {
+  frontend,
+  backend,
+  fullstack,
+};
+
+// HOME BUTTON CLICK
+document.querySelectorAll(".hero-button").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    console.log("clicked");
+    const type = btn.dataset.type;
+    startSlider(type);
+  });
+});
+
+function startSlider(type) {
+  currentData = allData[type];
+  currentIndex = 0;
+  answers = [];
+
+  home.classList.add("hidden");
+  slider.classList.remove("hidden");
+
+  renderSlide();
+}
+
+//  RENDER SLIDE
+function renderSlide() {
+  const slide = currentData[currentIndex];
+
+  slideImage.src = slide.imageURL;
+  title.textContent = slide.title;
+  description.textContent = slide.description;
+  question.textContent = slide.question;
+
+  yesBtn.classList.remove("active");
+  noBtn.classList.remove("active");
+
+  if (answers[currentIndex] === "Yes") yesBtn.classList.add("active");
+  if (answers[currentIndex] === "No") noBtn.classList.add("active");
+
+  updateProgress();
+}
+function updateProgress() {
+  const percent = (currentIndex / currentData.length) * 100;
+  progress.style.width = percent + "%";
+}

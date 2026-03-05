@@ -2,6 +2,9 @@
   font-family: "Avenir LT Std";
   src: url("./fonts/Avenir-LT-Std-65-Medium.otf");
 }
+.hidden {
+  display: none;
+}
 
 .karla {
   font-family: "Karla", sans-serif;
@@ -71,6 +74,8 @@ section {
   font-size: 16px;
   background: #fff;
   font-weight: 750;
+  text-decoration: none;
+  cursor: pointer;
 }
 .hero-button:hover {
   color: #ffff;
@@ -103,7 +108,9 @@ footer {
 }
 
 /* sliders  */
-
+#logo{
+  margin-left: 135px;
+}
 .slider-container {
   display: flex;
   height: 100vh;
@@ -111,20 +118,30 @@ footer {
 
 .slider-left {
   flex: 1;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  background: white;
+  background: #f8f8f8;
 }
 
 .slider-left img {
   max-width: 70%;
 }
+.slider-image-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
 
 .slider-right {
   flex: 1;
   padding: 40px;
-  background: #fafafa;
+  background: #ffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -133,23 +150,50 @@ footer {
 .progress-bar {
   width: 100%;
   height: 8px;
-  background: #ddd;
+  background: #efefef;
   margin-bottom: 20px;
+  border-radius: 4px;
 }
 
 #progress {
   height: 100%;
   width: 0%;
-  background: black;
+  background: #494949;
   transition: 0.3s;
+  border-radius: 4px;
 }
-
+#slider-title {
+  color: #000;
+  font-size: 48px;
+  font-weight: bold;
+}
+#description {
+  color: #9fa7ac;
+  font-size: 20px;
+  margin: 20px 0 80px 0;
+}
+#question {
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
 .slider-buttons button {
-  padding: 10px 20px;
+  padding: 13px 74px;
   margin-right: 10px;
   cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  border: #000 1px solid;
+  border-radius: 25px;
 }
-
+#yesBtn {
+  background: #000;
+  color: #ffff;
+}
+#noBtn {
+  background: #ffff;
+  color: #000;
+}
 .arrows {
   margin-top: 20px;
 }
@@ -197,7 +241,7 @@ footer {
     gap: 20px;
   }
   .home-left {
-    margin: 0 0px 0 0px;
+    margin: 0;
     flex: 1;
     height: 100%;
     display: flex;
