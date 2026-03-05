@@ -19,6 +19,16 @@
   /* font-family: "Avenir LT Std"; */
   font-family: "Figtree";
 }
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100vh;
+}
+.home-bg {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, white 58.26%, #f8f8f8 58.26%);
+}
 section {
   height: 100vh;
 }
@@ -68,7 +78,7 @@ section {
 }
 .home-right {
   width: 601px;
-  background: #f8f8f8;
+  /* background: #f8f8f8; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,25 +101,100 @@ footer {
   margin-left: 135px;
   padding: 20px 0;
 }
+
+/* sliders  */
+
+.slider-container {
+  display: flex;
+  height: 100vh;
+}
+
+.slider-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.slider-left img {
+  max-width: 70%;
+}
+
+.slider-right {
+  flex: 1;
+  padding: 40px;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #ddd;
+  margin-bottom: 20px;
+}
+
+#progress {
+  height: 100%;
+  width: 0%;
+  background: black;
+  transition: 0.3s;
+}
+
+.slider-buttons button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.arrows {
+  margin-top: 20px;
+}
+
+.arrows button {
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.active {
+  background: black;
+  color: white;
+}
+
 @media (min-width: 768px) and (max-width: 1250px) {
   .home-right {
     max-width: 601px;
     width: 100%;
+    background: #f8f8f8;
   }
   .main-hero-image {
     max-width: 420px;
     width: 100%;
   }
+  .home-bg {
+    width: 100%;
+    height: fit-content;
+    background: linear-gradient(to right, white 58.26%, #f8f8f8 58.26%);
+  }
 }
-
 @media (max-width: 768px) {
+  .home-bg {
+    width: 100%;
+    height: fit-content;
+    background: #ffff;
+  }
   .logoImg {
     max-width: 358px;
     width: 100%;
+    margin-bottom: 20px;
   }
   .home-body {
     display: flex;
     flex-direction: column;
+    gap: 20px;
   }
   .home-left {
     margin: 0 0px 0 0px;
@@ -120,6 +205,10 @@ footer {
     justify-content: space-between;
     align-items: center;
     text-align: center;
+  }
+  .hero-title {
+    font-size: 44px;
+    font-weight: bold;
   }
   .hero-buttons {
     display: flex;
@@ -136,6 +225,7 @@ footer {
   }
   .home-right {
     width: 100%;
+    background: #f8f8f8;
   }
   .main-hero-image {
     max-width: 420px;

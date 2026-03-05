@@ -16,8 +16,10 @@
   </head>
   <body>
     <!-- Home page starts here  -->
-    <section class="home-body">
-      <div class="home-left">
+    <section >
+      <div class="home-bg">
+        <div class="container home-body">
+          <div class="home-left">
         <div class="logo">
           <img src="./img/logo.png" alt="logoImg" class="logoImg" />
         </div>
@@ -44,10 +46,39 @@
           <img src="./img/hero.png" alt="hero-image" class="main-hero-image" />
         </div>
       </div>
+        </div>
+      </div>
     </section>
     <!-- Home page ends here  -->
-    <!-- Sliders section starts here  -->
 
+    <!-- Sliders section starts here  -->
+    <section id="slider" class="hidden">
+      <div class="slider-container">
+        <div class="slider-left">
+          <img id="slideImage" src="" alt="" />
+        </div>
+
+        <div class="slider-right">
+          <div class="progress-bar">
+            <div id="progress"></div>
+          </div>
+
+          <h2 id="slider-title"></h2>
+          <p id="description"></p>
+          <h3 id="question"></h3>
+
+          <div class="slider-buttons">
+            <button id="yesBtn">Yes</button>
+            <button id="noBtn">No</button>
+          </div>
+
+          <div class="arrows">
+            <button id="prev">⬅</button>
+            <button id="next">➡</button>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Sliders section starts here  -->
 
     <!-- Footer starts here  -->
