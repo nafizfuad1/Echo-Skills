@@ -22,7 +22,6 @@
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  height: 100vh;
 }
 .home-bg {
   width: 100%;
@@ -34,6 +33,7 @@ section {
 }
 .home-body {
   display: flex;
+  height: 100vh;
 }
 .hero-title {
   font-size: 48px;
@@ -46,7 +46,7 @@ section {
 }
 
 .home-left {
-  margin: 0 209px 0 135px;
+  margin: 0 0 0 135px;
   flex: 1;
   height: 100%;
   display: flex;
@@ -98,7 +98,7 @@ footer {
   font-weight: 400;
   color: #ffff;
   font-size: 16px;
-  margin-left: 135px;
+  /* margin-left: 135px; */
   padding: 20px 0;
 }
 
