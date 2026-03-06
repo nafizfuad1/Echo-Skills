@@ -250,6 +250,14 @@ const allData = {
   backend,
   fullstack,
 };
+function saveState() {
+  const state = {
+    currentIndex,
+    currentType,
+    answers,
+  };
+  localStorage.setItem("sliderState", JSON.stringify(state));
+}
 
 // HOME BUTTON CLICK
 document.querySelectorAll(".hero-button").forEach((btn) => {
@@ -260,8 +268,11 @@ document.querySelectorAll(".hero-button").forEach((btn) => {
   });
 });
 
+let currentType = "";
+
 function startSlider(type) {
   currentData = allData[type];
+  currentType = type;
   currentIndex = 0;
   answers = [];
 
@@ -293,21 +304,24 @@ function updateProgress() {
   progress.style.width = percent + "%";
 }
 
-// YES / NO 
+// YES / NO
 yesBtn.addEventListener("click", () => {
   answers[currentIndex] = "Yes";
+  saveState();
   nextSlide();
 });
 
 noBtn.addEventListener("click", () => {
   answers[currentIndex] = "No";
+  saveState();
   nextSlide();
 });
 
-//  ARROWS 
+//  ARROWS
 prevBtn.addEventListener("click", () => {
   if (currentIndex > 0) {
     currentIndex--;
+    saveState();
     renderSlide();
   }
 });
@@ -317,36 +331,83 @@ nextBtn.addEventListener("click", nextSlide);
 function nextSlide() {
   if (currentIndex < currentData.length - 1) {
     currentIndex++;
+    saveState();
     renderSlide();
   } else {
     showResult();
+    saveState();
   }
 }
 
-//  RESULT PAGE 
+//  RESULT PAGE
 function showResult() {
-  progress.style.width = "100%";
+  // Hide slider section
+  slider.classList.add("hidden");
 
-  let resultHTML = `
-    <h2>Result</h2>
-    <ul>
-  `;
+  // Show home section (reusing layout)
+  home.classList.remove("hidden");
 
-  currentData.forEach((item, index) => {
-    resultHTML += `
-      <li>${item.title} : ${answers[index] || "Not Answered"}</li>
-    `;
-  });
+  // Update left section with result content
+  const leftSection = document.querySelector(
+    ".home-left .left-section-content",
+  );
+  leftSection.innerHTML = `
+    <h2 class="thanks hero-title">Thank you!</h2>
+    <p class="result-text hero-text">
+      Here is the summary of your ${currentType} development skill:
+    </p>
 
-  resultHTML += `
+    <ul class="result-list">
+      ${currentData
+        .map(
+          (item, index) =>
+            `<li class="icon-item">
+              <img src="./img/${answers[index] === "Yes" ? "yes" : "no"}.svg" alt="${
+                answers[index]
+              }"> 
+              ${item.title}
+            </li>`,
+        )
+        .join("")}
     </ul>
-    <button onclick="goHome()">Go Home</button>
+
+   <a class="go-home" onclick="goHome()"> <img class="back-arrow-img" src="./img/back-arrow.png"> <p>Go to home</p> </a>
   `;
 
-  document.querySelector(".slider-right").innerHTML = resultHTML;
+  // Keep hero image on the right (or any illustration)
+  const rightSection = document.querySelector(".home-right .hero-img");
+  rightSection.innerHTML = `
+    <img src="./img/hero.png" alt="hero" class="main-hero-image">
+  `;
 }
 
-//  GO HOME 
+//  GO HOME
 function goHome() {
+  localStorage.removeItem("sliderState"); // clear saved state
   location.reload();
 }
+
+function loadState() {
+  const savedState = localStorage.getItem("sliderState");
+  if (savedState) {
+    const state = JSON.parse(savedState);
+    currentIndex = state.currentIndex || 0;
+    currentType = state.currentType || "";
+    answers = state.answers || [];
+
+    if (currentType && allData[currentType]) {
+      currentData = allData[currentType];
+
+      // Decide whether to show slider or result
+      if (currentIndex < currentData.length) {
+        home.classList.add("hidden");
+        slider.classList.remove("hidden");
+        renderSlide();
+      } else {
+        showResult();
+      }
+    }
+  }
+}
+
+loadState();
