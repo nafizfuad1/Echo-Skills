@@ -267,6 +267,12 @@ footer {
   align-items: center;
   justify-content: center;
 }
+#slider-type-title {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 750px;
+  color: #494949;
+}
 
 @media (min-width: 768px) and (max-width: 1250px) {
   .home-right {
@@ -296,6 +302,7 @@ footer {
     margin-bottom: 20px;
   }
   .home-body {
+    height: fit-content;
     display: flex;
     flex-direction: column;
     gap: 20px;
